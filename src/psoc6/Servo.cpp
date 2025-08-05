@@ -83,8 +83,7 @@ uint8_t Servo::attach(uint8_t pin, uint16_t min, uint16_t max)
             // Check if pin already in use
             if(_servos[i] == pin)
             {
-            Serial.print(_servos[i]);
-            return INVALID_SERVO;
+                return INVALID_SERVO;
             }
             // Check if selected pin has a PWM unit on the used PSOC6 board
             if(_allowed[i] == pin)
